@@ -1,7 +1,7 @@
 Warm-up mini-Report: Mosquito Blood Hosts in Salt Lake City, Utah
 ================
 Kyle Thomas
-2025-10-08
+2025-10-09
 
 - [ABSTRACT](#abstract)
 - [BACKGROUND](#background)
@@ -22,21 +22,18 @@ Kyle Thomas
 
 # ABSTRACT
 
-West Nile Virus (WNV) first entered the USA in 1999. It first appeared
-in New York. WNV requires a mosquito vector and is mostly transmitted
-from an infected bird and transmitted through a mosquito to new bird.
-This study examined the abundence of host species present in Salt Lake
-City, Utah. Mosquitoes in this area were collected and their most recent
-blood meal was acquired. DNA was extracted then amplified using PCR. The
-DNA was then sequenced to find the host species. Using this data,
-barplots were created of blood meal ID by trap locations for WNV
-negative and positive mosquito pools. These showed that there was a
-higher rate of blood meals taken from House finches in WNV positive
-areas than negative. Generalized Linear Modeling was ran, showing that
-as the number of mosquito blood meals taken from the House Finch
-increases so does the rate of infection for WNV. This data indicates
-that the rate of WNV positive pools does correlate with the density of
-the House Finch population.
+West Nile Virus (WNV) first entered the USA in 1999 in New York, USA.
+WNV requires a mosquito vector and is mostly transmitted from an
+infected bird and transmitted through a mosquito to new bird. This study
+examined the abundence of host species present in Salt Lake City, Utah.
+Mosquitoes in this area were collected and the DNA from their most
+recent blood meal was amplified with PCR and the DNA was then sequenced.
+Using this data, barplots were created of blood meal ID by trap
+locations for WNV negative and positive mosquito pools. These showed
+that there was a higher rate of blood meals taken from House finches in
+WNV positive areas than negative. Generalized Linear Modeling was ran,
+showing that as the number of mosquito blood meals taken from the House
+Finch increases so does the rate of infection for WNV.
 
 # BACKGROUND
 
@@ -373,4 +370,4 @@ and patterns of viral amplification.
     Dis. 2003 Mar;9(3):311-22. <https://doi.org/10.3201/eid0903.020628>
 
 2.  ChatGPT. OpenAI, version Jan 2025. Used as a reference for functions
-    such as plot() and to correct syntax errors. Accessed 2025-10-08.
+    such as plot() and to correct syntax errors. Accessed 2025-10-09.
