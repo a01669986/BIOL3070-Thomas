@@ -11,10 +11,8 @@ Kyle Thomas
   - [Prediction](#prediction)
 - [METHODS](#methods)
 - [DISCUSSION](#discussion)
-  - [Interpretation - fill in
-    analysis](#interpretation---fill-in-analysis)
-  - [Interpretation - fill in
-    analysis/plot](#interpretation---fill-in-analysisplot)
+  - [Interpretation of plot](#interpretation-of-plot)
+  - [Interpretation of analysis](#interpretation-of-analysis)
 - [CONCLUSION](#conclusion)
 - [REFERENCES](#references)
 
@@ -311,7 +309,7 @@ there may be many outside variables affecting these statistics. These
 potential confounding factors cannot be identified or accounted for
 without further research and testing.
 
-## Interpretation - fill in analysis
+## Interpretation of plot
 
 Each bar in the plot represents the count of the host species in both
 WNV-negative and WNV-positive locations based on bloodmeal counts from
@@ -324,7 +322,7 @@ area. The difference between the blood meal counts between each graph
 shows that the House Finch is a prominent carrier of WNV in the area as
 well.
 
-## Interpretation - fill in analysis/plot
+## Interpretation of analysis
 
 The data was analyzed using a generalized linear model (GLM). The GLM
 was used to examine the correlation between the number of mosquito-House
