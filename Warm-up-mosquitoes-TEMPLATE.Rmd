@@ -190,10 +190,10 @@ Both analyses show a strong correlation between WNV presence and infection rate 
 A limitation of this study is that, while a strong correlation was seen, causation cannot be inferred from this analysis alone. Although our analyses show there is strong evidence in support of the hypothesis, there may be many outside variables affecting these statistics. These potential confounding factors cannot be identified or accounted for without further research and testing.
  
 
-## Interpretation of plot
+## Interpretation of Plot
 Each bar in the plot represents the count of the host species in both WNV-negative and WNV-positive locations based on bloodmeal counts from mosquitoes. The House Finch is the leading host for both positive and negative graphs. There are roughly 60 blood meals taken from house finches on the positive graph, while the negative graph only has about 30 blood meals. The House Finch being the leading host for each graph, it can be inferred that the House Finch is common in the Salt Lake City area. The difference between the blood meal counts between each graph shows that the House Finch is a prominent carrier of WNV in the area as well. 
 
-## Interpretation of analysis
+## Interpretation of Analysis
 The data was analyzed using a generalized linear model (GLM). The GLM was used to examine the correlation between the number of mosquito-House Finch blood meals and if the site has WNV-positive pools(binary) or a higher WNV-positive rate at each location (numeric).To predict whether the presence of WNV at a site could be predicted based on the number of blood meals mosquitoes had on House Finches, the first model used a binomial GLM. The binomial GLM resulted in a p-value of 0.0287, meaning it is statistically significant to the hypothesis. This supports the idea that increased populations of House Finches at a site will increase the likelihood of a WNV-positive mosquito pool.
 
 Linear regression was used in the second model to examine whether the number of House Finch blood meals predicted the WNV positivity rate. The p-value for the linear regression was 4.54e-05, showing high statistical significance, supporting the idea that an increase in House Finch blood meals is correlated with an increase in WNV positivity rate. 
