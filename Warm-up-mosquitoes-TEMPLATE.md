@@ -1,7 +1,7 @@
 Warm-up mini-Report: Mosquito Blood Hosts in Salt Lake City, Utah
 ================
 Kyle Thomas
-2025-10-09
+2025-10-10
 
 - [ABSTRACT](#abstract)
 - [BACKGROUND](#background)
@@ -10,8 +10,6 @@ Kyle Thomas
   - [Hypothesis](#hypothesis)
   - [Prediction](#prediction)
 - [METHODS](#methods)
-  - [Fill in 2nd analysis/plot e.g. generalized linear
-    model](#fill-in-2nd-analysisplot-eg-generalized-linear-model)
 - [DISCUSSION](#discussion)
   - [Interpretation - fill in
     analysis](#interpretation---fill-in-analysis)
@@ -40,24 +38,22 @@ Finch increases so does the rate of infection for WNV.
 West Nile virus (WNV) is a mosquito-borne virus that was first
 introduced into the United States in 1999. This virus affected various
 types of animals like humans and birds. It is usually passed from a
-mosquito vector taking a blood meal from an infected host and then later
+mosquito vector taking a blood meal from an infected host then later
 biting a new healthy host. Although it is less common, the virus can be
-passed to humans in this same way as well.
+passed to humans in this same way.
 
 This study’s focus is on mosquito blood meal data from Salt Lake City,
-Utah. Determining which animal the mosquito had taken a blood meal from
-was the first step. DNA extraction followed by polymerase chain reaction
-(PCR) and DNA sequencing was used to identify the host species of the
-blood meal.
+Utah. The first step was determining which animal the mosquito had taken
+a blood meal from. The next step is DNA extraction followed by
+polymerase chain reaction (PCR) and DNA sequencing was used to identify
+the host species of the blood meal.
 
-The House Finch a common carrier of WNV. The House Finch has the longest
-days of viremia compared to all carrier species (Kumar et al., 2003).
-This icrease of viremia could likely cause the abundance of infection
-among the species. Salt lake City is an urban environment, a common
-environment for House Finches. House finches are very common in urban
-environments like, Salt Lake City. A primary focus was on the
-correlation between high House Finch populations and WNV cases in Salt
-Lake City.
+The House Finch is a common carrier of WNV and has the longest days of
+viremia compared to all carrier species (Kumar et al., 2003). This
+increase of viremia could likely cause the abundance of infection among
+the species. Salt lake City is an urban environment, a common
+environment for House Finches. A primary focus was on the correlation
+between high House Finch populations and WNV cases in Salt Lake City.
 
 ``` r
 # Manually transcribe duration (mean, lo, hi) from the last table column
@@ -120,11 +116,12 @@ more positive WNV pools.
 
 To identify the most common hosts on which mosquitoes feed, mosquitoes
 were collected from the Salt Lake City area. DNA extraction was used on
-each mosquito’s last blood meal. PCR was then used to amplify the DNA.
-It was then sequenced to identify the host from each blood meal. Once
-the host data had been collected, visual plots were made. These compared
-the distribution of blood meals across host species at sites with and
-without WNV-positive mosquito pools.
+each mosquito’s last blood meal. The extracted sequence was used to find
+the host from the blood meal using BLAST. PCR was then used to amplify
+the DNA. Using the BLAST data the most frequent host species was
+identified and visual plots were made. These compared the distribution
+of blood meals across host species at sites with and without
+WNV-positive mosquito pools.
 
 ``` r
 ## Fill in first analysis
@@ -228,8 +225,6 @@ host_species_colors <- species_colors
 ## Keep the colors mapping for reuse elsewhere
 host_species_colors <- species_colors
 ```
-
-## Fill in 2nd analysis/plot e.g. generalized linear model
 
 Generalized linear models (GLMs) were used to statistically test whether
 blood meals from House Finches were correlated with increased WNV
@@ -370,4 +365,4 @@ and patterns of viral amplification.
     Dis. 2003 Mar;9(3):311-22. <https://doi.org/10.3201/eid0903.020628>
 
 2.  ChatGPT. OpenAI, version Jan 2025. Used as a reference for functions
-    such as plot() and to correct syntax errors. Accessed 2025-10-09.
+    such as plot() and to correct syntax errors. Accessed 2025-10-10.
