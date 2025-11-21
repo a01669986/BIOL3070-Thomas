@@ -1,7 +1,7 @@
-Warm-up mini-Report: Mosquito Blood Hosts in Salt Lake City, Utah
+Warm-up mini-Report: COPD
 ================
 Kyle Thomas
-2025-11-13
+2025-11-21
 
 - [ABSTRACT](#abstract)
 - [BACKGROUND](#background)
@@ -10,20 +10,63 @@ Kyle Thomas
   - [Hypothesis](#hypothesis)
   - [Prediction](#prediction)
 - [METHODS](#methods)
-  - [Interpretation of Plot](#interpretation-of-plot)
-  - [Interpretation of Analysis](#interpretation-of-analysis)
+  - [Air Quality Index](#air-quality-index)
+- [DISCUSSION](#discussion)
 - [CONCLUSION](#conclusion)
 - [REFERENCES](#references)
 
 # ABSTRACT
 
+Chronic Obstructive Pulmonary Disease and air quality have been studied
+extensively to deduce an interconnection between the two. Our goal is to
+see this linkage in action, asking the question: Does decreased air
+quality lead to an increase in COPD across the United States? To reach
+our goal, we looked at the air quality data provided by the World
+Population Review and COPD rates across the US provided by the American
+Lung Association. With these two data sets, we used statistical tests,
+the Pearson correlation test, and generalized linear models, to look for
+an association between the two data sets. Our results revealed a small
+relationship that was significant, specifically, 11% of COPD cases
+appear to be caused by low air quality inhalation for extended periods
+of time. Thus, low air quality exposure can lead to COPD and other
+pulmonary diseases, and steps should be taken to improve low air quality
+states to improve life expectancy in the United States.
+
 # BACKGROUND
+
+Air Quality Index (AQI) is a standardized system used to measure the
+quality of the air around us. The AQI is calculated using the four major
+air pollutants, as determined by the Clean Air Act, which are
+ground-level ozone, particle pollution, carbon monoxide, and sulfur
+dioxide. AQI is measured on a scale of 0-500, with 0 being the cleanest
+air and 500 being the most hazardous. This categorizes 0 as the highest
+air quality and 500 as the lowest air quality. AQI is a useful tool that
+has become integrated into our weather apps, making it accessible to the
+majority of the population. One of the primary causes of death in urban
+areas is chronic obstructive pulmonary disease (COPD). COPD can be
+caused by many factors including tobacco use, occupational factors,
+infection, and air pollution. This disease progresses slowly and worsens
+with prolonged exposure. The damage is usually not reversible and can
+lead to pulmonary failure. There are many factors that play into the
+prevalence of COPD like region, age, and sex.
 
 ``` r
 install.packages(c("tidyverse", "viridis"))
 ```
 
 # STUDY QUESTION and HYPOTHESIS
+
+With this information in mind, we have posed the following question: “Do
+areas of low air quality have higher rates of Chronic Obstructive
+Pulmonary Disease (COPD)?” Although there are many factors that
+influence COPD, if there is a negative correlation between air quality
+and rates of COPD there are many known preventative measures that can be
+taken to prevent COPD and improve lung health. These findings can
+influence health practices and help those susceptible to COPD avoid risk
+factors, such as low air quality. Although there are many factors that
+can play into rates of COPD, we hypothesize that this negative
+correlation will exist and that areas with lower air quality will have
+higher rates of Chronic Obstructive Pulmonary Disease.
 
 ## Questions
 
@@ -37,6 +80,12 @@ of lung disease and lung related mortality.
 ## Prediction
 
 # METHODS
+
+We collected data from two databases, World Population Review air
+quality database, and The National Lung Association COPD rates. All data
+was formatted, normalized, and tested in R. We ran the data through two
+statistical tests, a Pearson correlation test, and a generalized linear
+model.
 
 ``` r
 lines <- str_split(data_text, "\n")[[1]]
@@ -120,6 +169,9 @@ map_plot_data %>%
 ```
 
 ![](warm-up-mini-report_files/figure-gfm/copd-by-gender-map-1.png)<!-- -->
+Figure 1. COPD prevalence is compared between males and females in the
+continental United States. Females show a slightly higher average of
+COPD.
 
 ``` r
 states_map <- map_data("state") 
@@ -154,7 +206,11 @@ ggplot(map_diff_data, aes(x = long, y = lat, group = group, fill = Percent_Diffe
 ```
 
 ![](warm-up-mini-report_files/figure-gfm/copd-difference-map-1.png)<!-- -->
-\## Air Quality Index
+Figure 2. COPD percent difference for females compared to males in
+shown, with most states having a higher percentage of COPD prevalence in
+females.
+
+## Air Quality Index
 
 ``` r
 aq_df <- read_csv("air-quality-by-state-2025.csv")
@@ -209,16 +265,57 @@ ggplot(map_plot_data, aes(x = long, y = lat, group = group, fill = Overall_AQI))
 ```
 
 ![](warm-up-mini-report_files/figure-gfm/air-quality-map-1.png)<!-- -->
-\# DISCUSSION
+Figure 3. Overall AQI is shown for each of the continental United
+States, averaged over the year 2025. All states land generally within an
+acceptable range for daily intake, with some on the higher side
+indicating a lower AQI.
 
-## Interpretation of Plot
+# DISCUSSION
 
-## Interpretation of Analysis
+We were able to determine that there is correlation between areas of low
+air quality having higher rates of lung disease. The correlation isn’t
+huge, but it is relevant according to our p-value of 0.01793 from our
+generalized linear model. This shows that poor air quality does have an
+effect on the development of COPD, but that it may not be the only cause
+or the biggest cause. Our R² value was 0.1112, which is the proportion
+of our data that is normalized or combinable. This means that 11% of
+COPD is caused by poor air quality. We don’t know if there is a genetic
+tie to COPD in these areas that may be affecting the number of infected
+individuals. There may also be tainted data due to travel or people who
+have moved from one state to another. We also learned that there is no
+difference in COPD levels between genders, with an insignificant p-value
+of 2.27E-5. While there are still some uncertainties, we can confidently
+say that areas with lower air quality will have higher rates of Chronic
+Obstructive Pulmonary Disease.
 
 # CONCLUSION
 
+According to our data, there is a correlation between areas with a low
+air quality index number having higher rates of Chronic Obstructive
+Pulmonary Disease. Knowing this, we can help inform people in areas of
+higher AQI to take the necessary precautions to avoid COPD. This
+includes practices such as reducing time outdoors during times of higher
+AQI, having proper filters in their households, and limiting use of
+machinery that contributes to the higher AQI. Having this knowledge
+could be extremely beneficial to lowering the rates of COPD in the US
+and could help people get back to the life they deserve.
+
 # REFERENCES
 
-1.  
-2.  ChatGPT. OpenAI, version Jan 2025. Used as a reference for functions
-    such as plot() and to correct syntax errors. Accessed 2025-11-13.
+1.  American Lung Association. (2023). COPD prevalence rates and counts
+    by state and gender. Retrieved November 18, 2025, from
+    <https://www.lung.org/research/trends-in-lung-disease/copd-trends-brief/data-tables/copd-prevalence-rates-by-state-gender>
+
+2.  Duan, R.R., Hao, K., & Yang, T. (2020). Air pollution and chronic
+    obstructive pulmonary disease. Chronic Diseases and Translational
+    Medicine, 6(4), 260–269.
+    <https://doi.org/10.1016/j.cdtm.2020.05.004>
+
+3.  Google. (2025). Gemini (Version Jan 2025) \[Large language model\].
+    Accessed 2025-11-21.
+
+4.  OpenAI. (2025). ChatGPT (Jan 2025 version) \[Large language model\].
+    Accessed 2025-11-21.
+
+5.  World Population Review. (2025). Air Quality by State 2025.
+    <https://worldpopulationreview.com/state-rankings/air-quality-by-state>
