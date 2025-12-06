@@ -171,6 +171,7 @@ map_plot_data %>%
     strip.text = element_text(size = 14, face = "bold")
   )
 ```
+
 COPD prevalence is compared between males and females in the continental United States. Females show a slightly higher average of COPD. This is relevant because it shows that gender does not play a large role in COPD rates. This code creates the difference between sexes map. We first differentiate male and female. Second, we plot the difference. Lastly, the color scale is created and the map is printed.
 
 ```{r copd-difference-map}
@@ -204,6 +205,7 @@ ggplot(map_diff_data, aes(x = long, y = lat, group = group, fill = Percent_Diffe
     legend.text = element_text(size = 9)
   )
 ```
+
 COPD percent difference for females compared to males in shown, with most states having a higher percentage of COPD prevalence in females.
 
 ## Air Quality Index
@@ -237,6 +239,7 @@ ggplot(map_plot_data, aes(x = long, y = lat, group = group, fill = Overall_AQI))
     legend.text = element_text(size = 9)
   )
 ```
+
 Overall AQI is shown for each of the continental United States, averaged over the year 2025. All states land generally within an acceptable range for daily intake, with some on the higher side indicating a lower AQI.
 
 This code normalizes and reformats our data. We begin by loading needed libraries. Then, we load in our data and format to recombine them. Lastly, we normalize our data using the SQRT method.
@@ -286,6 +289,7 @@ ggplot(df, aes(x = Percent_Total)) +
     plot.title = element_text(size = 16, face = "bold", hjust = 0.5)
   )
 ```
+
 Overall COPD rate percent is shown to be around 6, with some variation among other states.
 
 ```{r Overall-AQI}
@@ -303,6 +307,7 @@ ggplot(aq_df, aes(x = `AirQuality_AirQualityIndexViaUSA_num_YearFree`)) +
     plot.title = element_text(size = 16, face = "bold", hjust = 0.5)
   )
 ```
+
 Overall AQI is shown to be around 44, with a wide variation among other states.
 
 # PEARSON TEST & GLM
