@@ -154,6 +154,7 @@ map_plot_data %>%
 ```
 
 ![](warm-up-mini-report_files/figure-gfm/copd-by-gender-map-1.png)<!-- -->
+
 COPD prevalence is compared between males and females in the continental
 United States. Females show a slightly higher average of COPD. This is
 relevant because it shows that gender does not play a large role in COPD
@@ -194,6 +195,7 @@ ggplot(map_diff_data, aes(x = long, y = lat, group = group, fill = Percent_Diffe
 ```
 
 ![](warm-up-mini-report_files/figure-gfm/copd-difference-map-1.png)<!-- -->
+
 COPD percent difference for females compared to males in shown, with
 most states having a higher percentage of COPD prevalence in females.
 
@@ -234,6 +236,7 @@ ggplot(map_plot_data, aes(x = long, y = lat, group = group, fill = Overall_AQI))
 ```
 
 ![](warm-up-mini-report_files/figure-gfm/air-quality-map-1.png)<!-- -->
+
 Overall AQI is shown for each of the continental United States, averaged
 over the year 2025. All states land generally within an acceptable range
 for daily intake, with some on the higher side indicating a lower AQI.
@@ -292,6 +295,7 @@ ggplot(df, aes(x = Percent_Total)) +
 ```
 
 ![](warm-up-mini-report_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
 Overall COPD rate percent is shown to be around 6, with some variation
 among other states.
 
@@ -312,6 +316,7 @@ ggplot(aq_df, aes(x = `AirQuality_AirQualityIndexViaUSA_num_YearFree`)) +
 ```
 
 ![](warm-up-mini-report_files/figure-gfm/Overall-AQI-1.png)<!-- -->
+
 Overall AQI is shown to be around 44, with a wide variation among other
 states.
 
@@ -329,7 +334,7 @@ print
 
     ## function (x, ...) 
     ## UseMethod("print")
-    ## <bytecode: 0x64ce361f8ba0>
+    ## <bytecode: 0x6171b5671ba0>
     ## <environment: namespace:base>
 
 ``` r
